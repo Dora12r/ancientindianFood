@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://Dora12r.github.io/ancientIndianFood/sitemap.xml
