@@ -75,7 +75,7 @@
             border-radius: 15px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
             transition: transform 0.3s ease;
-            cursor: pointer;
+            cursor: default;
         }
 
         .blog-post:hover {
@@ -185,36 +185,36 @@
         <h1>Welcome to Ancient Indian Food</h1>
         <p>Explore forgotten and traditional Indian recipes.</p>
         
-        <div class="blog-post" onclick="window.location.href='recipes/panch-phoron-dal.html'">
+        <div class="blog-post">
             <h2>1. Traditional Panch Phoron Dal</h2>
             <p>A classic Bengali dish made with five unique spices and slow-cooked lentils.</p>
             <img src="images/panch-phoron-dal.jpg" alt="Traditional Panch Phoron Dal" loading="lazy">
             <div class="recipe-details">
                 <p><i class="far fa-clock"></i> Prep: 15 mins | Cook: 30 mins</p>
                 <p><i class="fas fa-utensils"></i> Servings: 4</p>
-                <button class="view-recipe">View Full Recipe</button>
+                <a href="panch-phoron-recipe.html" class="view-recipe">View Full Recipe</a>
             </div>
         </div>
 
-        <div class="blog-post" onclick="window.location.href='recipes/bajre-ki-roti.html'">
+        <div class="blog-post">
             <h2>2. Rajasthani Bajre Ki Roti</h2>
             <p>An ancient millet-based Indian bread, packed with nutrition and earthy flavors.</p>
             <img src="images/bajre-ki-roti.jpg" alt="Rajasthani Bajre Ki Roti" loading="lazy">
             <div class="recipe-details">
                 <p><i class="far fa-clock"></i> Prep: 15 mins | Cook: 30 mins</p>
                 <p><i class="fas fa-utensils"></i> Servings: 4</p>
-                <button class="view-recipe">View Full Recipe</button>
+                <a href="bajra-roti-recipe.html" class="view-recipe">View Full Recipe</a>
             </div>
         </div>
 
-        <div class="blog-post" onclick="window.location.href='recipes/badam-halwa.html'">
+        <div class="blog-post">
             <h2>3. Mughlai Badam Halwa</h2>
             <p>A royal dessert from the Mughal era, made with almonds, ghee, and saffron.</p>
             <img src="images/badam-halwa.jpg" alt="Mughlai Badam Halwa" loading="lazy">
             <div class="recipe-details">
                 <p><i class="far fa-clock"></i> Prep: 15 mins | Cook: 30 mins</p>
                 <p><i class="fas fa-utensils"></i> Servings: 4</p>
-                <button class="view-recipe">View Full Recipe</button>
+                <a href="badam-halwa-recipe.html" class="view-recipe">View Full Recipe</a>
             </div>
         </div>
     </div>
@@ -257,17 +257,22 @@
             margin-top: 10px;
             cursor: pointer;
             transition: background 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
         }
 
         .view-recipe:hover {
             background: var(--secondary-color);
+            color: white;
         }
 
         .blog-post:hover .view-recipe {
             background: var(--secondary-color);
         }
+
+        .blog-post {
+            cursor: default;
+        }
     </style>
 </body>
 </html>
-
-
