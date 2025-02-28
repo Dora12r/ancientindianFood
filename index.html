@@ -75,6 +75,7 @@
             border-radius: 15px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
             transition: transform 0.3s ease;
+            cursor: pointer;
         }
 
         .blog-post:hover {
@@ -136,6 +137,39 @@
         }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "Recipe",
+          "name": "Traditional Panch Phoron Dal",
+          "description": "A classic Bengali dish made with five unique spices and slow-cooked lentils",
+          "image": "images/panch-phoron-dal.jpg",
+          "prepTime": "PT15M",
+          "cookTime": "PT30M",
+          "recipeYield": "4 servings",
+          "recipeIngredient": [
+            "1 cup masoor dal",
+            "1 tsp panch phoron",
+            "2 tbsp ghee",
+            "Salt to taste"
+          ],
+          "recipeInstructions": [
+            "Wash and soak dal",
+            "Heat ghee and add panch phoron",
+            "Add dal and cook until tender"
+          ],
+          "nutrition": {
+            "@type": "NutritionInformation",
+            "calories": "245 calories"
+          }
+        }
+        <!-- Add similar schema for other recipes -->
+      ]
+    }
+    </script>
 </head>
 <body>
     <div class="navbar">
@@ -151,22 +185,37 @@
         <h1>Welcome to Ancient Indian Food</h1>
         <p>Explore forgotten and traditional Indian recipes.</p>
         
-        <div class="blog-post">
+        <div class="blog-post" onclick="window.location.href='recipes/panch-phoron-dal.html'">
             <h2>1. Traditional Panch Phoron Dal</h2>
             <p>A classic Bengali dish made with five unique spices and slow-cooked lentils.</p>
             <img src="images/panch-phoron-dal.jpg" alt="Traditional Panch Phoron Dal" loading="lazy">
+            <div class="recipe-details">
+                <p><i class="far fa-clock"></i> Prep: 15 mins | Cook: 30 mins</p>
+                <p><i class="fas fa-utensils"></i> Servings: 4</p>
+                <button class="view-recipe">View Full Recipe</button>
+            </div>
         </div>
 
-        <div class="blog-post">
+        <div class="blog-post" onclick="window.location.href='recipes/bajre-ki-roti.html'">
             <h2>2. Rajasthani Bajre Ki Roti</h2>
             <p>An ancient millet-based Indian bread, packed with nutrition and earthy flavors.</p>
             <img src="images/bajre-ki-roti.jpg" alt="Rajasthani Bajre Ki Roti" loading="lazy">
+            <div class="recipe-details">
+                <p><i class="far fa-clock"></i> Prep: 15 mins | Cook: 30 mins</p>
+                <p><i class="fas fa-utensils"></i> Servings: 4</p>
+                <button class="view-recipe">View Full Recipe</button>
+            </div>
         </div>
 
-        <div class="blog-post">
+        <div class="blog-post" onclick="window.location.href='recipes/badam-halwa.html'">
             <h2>3. Mughlai Badam Halwa</h2>
             <p>A royal dessert from the Mughal era, made with almonds, ghee, and saffron.</p>
             <img src="images/badam-halwa.jpg" alt="Mughlai Badam Halwa" loading="lazy">
+            <div class="recipe-details">
+                <p><i class="far fa-clock"></i> Prep: 15 mins | Cook: 30 mins</p>
+                <p><i class="fas fa-utensils"></i> Servings: 4</p>
+                <button class="view-recipe">View Full Recipe</button>
+            </div>
         </div>
     </div>
 
@@ -181,24 +230,44 @@
             <p>&copy; 2024 Ancient Indian Food. All rights reserved.</p>
         </div>
     </footer>
+
+    <style>
+        .recipe-details {
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+        }
+
+        .recipe-details p {
+            color: #666;
+            margin: 5px 0;
+        }
+
+        .recipe-details i {
+            margin-right: 8px;
+            color: var(--primary-color);
+        }
+
+        .view-recipe {
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin-top: 10px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .view-recipe:hover {
+            background: var(--secondary-color);
+        }
+
+        .blog-post:hover .view-recipe {
+            background: var(--secondary-color);
+        }
+    </style>
 </body>
 </html>
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Recipe",
-  "name": "Panch Phoron Dal",
-  "image": "https://dora12r.github.io/ancientIndianFood/images/panch-phoron-dal.jpg",
-  "description": "A classic Bengali dish made with five unique spices and slow-cooked lentils.",
-  "author": {
-    "@type": "Person",
-    "name": "Ancient Indian Food"
-  },
-  "recipeCuisine": "Indian",
-  "recipeCategory": "Dinner",
-  "keywords": "panch phoron dal, Bengali cuisine, Indian lentil dish",
-  "datePublished": "2024-02-27"
-}
-</script>
 
